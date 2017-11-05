@@ -12,6 +12,8 @@ const store = createStore(myApp);
 function render() {
     ReactDOM.render(<App store={store}/>, document.getElementById('root'));
 }
+store.subscribe(render)
+
 registerServiceWorker();
 
 render();
