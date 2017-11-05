@@ -7,19 +7,20 @@ const initialState = {
 export default ( state = initialState, action ) => {
     switch (action.type ) {
         case 'VORT_ANGULAR':
-            console.log('in angular')
-            return Object.assign({}, state, {
-                angular: state.angular + 1
-            })
+            return Object.assign( {}, state, { angular: state.angular + 1 } )
         case 'VORT_REACT':
-            return Object.assign({}, state, {
+            return {
+                ...state,
                 react: state.react + 1
-            })
+            }
         case 'VORT_VUEJS':
-            return Object.assign({}, state, {
+            return {
+                ...state,
                 vuejs: state.vuejs + 1
-            })
+            }
         default:
             return state
     }
 }
+
+// Object.assign concat filter map reduce... all return new object, follwoing immutable
