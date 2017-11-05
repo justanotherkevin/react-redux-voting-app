@@ -52,3 +52,7 @@
   color: #e69010;
   font-weight: bold;
 }
+.progress {
+  width: 75%;
+  margin: auto;
+}
