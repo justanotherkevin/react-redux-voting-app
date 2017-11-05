@@ -26,3 +26,29 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+.angular-bar {
+  background-color: #dd1b16;
+  text-align: center;
+  position: relative;
+}
+.react-bar {
+    background-color: #15c0de;
+    text-align: center;
+    background-image: linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+    position: relative;
+
+}
+.vuejs-bar {
+  background-color: #51ba89;
+  text-align: center;
+  position: relative;
+}
+.btn {
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px 0px #888888;
+  max-width: 96px;
+}
+.btn:hover {
+  color: #e69010;
+  font-weight: bold;
+}
