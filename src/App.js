@@ -1,21 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {voteReact,voteAngular,voteVuejs } from './actions';
 import './App.css';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    constructor(props) {
+        super(props);
+        this.store = this.props.store;
+    }
+    handleVoteAngular = () => {
+        this.store.dispatch(voteAngular());
+    }
+    handleVoteReact = () => {
+        this.store.dispatch(voteReact());
+    }
+    handleVoteVuejs = () => {
+        this.store.dispatch(voteVuejs());
+    }
+    render() {
+        return (
+            <div>
+                <div className="jumbotron">
+                    <button onClick={this.handleVoteAngular}>
+                        angular
+                    </button>
+                    <button onClick={this.handleVoteReact}>
+                        react
+                    </button>
+                    <button onClick={this.handleVoteVuejs}>
+                        vuejs
+                    </button>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default App;
