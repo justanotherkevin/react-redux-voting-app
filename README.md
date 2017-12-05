@@ -1,1 +1,1 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This project is live at heroku. [Voting app](https://voting-wtih-redux.herokuapp.com/).
